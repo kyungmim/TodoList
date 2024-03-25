@@ -40,12 +40,39 @@ a {
   text-decoration: unset;
 }
 
+label {
+  all: unset;
+  color: purple;
+}
+
 input {
   all: unset;
   display: block;
   inline-size: 100%;
   height: 36px;
   line-height: 36px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: -10px;
+
+  /* css */
+  border: 1px double #8a2be2;
+  background-color: #e6e0ec;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1rem;
+  color: rgba(147, 112, 219, 0.3);
+}
+
+textarea {
+  all: unset;
+  display: block;
+  inline-size: 100%;
   padding: 10px;
   box-sizing: border-box;
 
@@ -56,9 +83,12 @@ input {
   margin-top: 1rem;
 }
 
-input::placeholder {
-  font-size: 1rem;
-  color: rgba(147, 112, 219, 0.3);
+form {
+  border: 1px solid #ae7cdd;
+  padding: 14px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: 30px;
 }
 
 /* ----------------------- */
@@ -75,6 +105,7 @@ input::placeholder {
 
 .scrollBar::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 body {
@@ -90,7 +121,7 @@ body {
 .wrpper {
   background-color: #fff;
   max-width: 500px;
-  max-height: 600px;
+  max-height: 750px;
   width: 100%;
   height: 100%;
   margin: auto;
@@ -145,7 +176,7 @@ hr {
 }
 
 .Todolist {
-  max-height: 320px;
+  max-height: 270px;
   height: 100%;
   overflow-y: auto;
   display: flex;

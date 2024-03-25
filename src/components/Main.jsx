@@ -1,4 +1,3 @@
-import TodoInput from "@pages/TodoInput";
 import TodoList from "@pages/TodoList";
 
 function Main() {
@@ -6,7 +5,6 @@ function Main() {
     <>
       <main className="main">
         <TodoList />
-        <TodoInput />
       </main>
     </>
   );

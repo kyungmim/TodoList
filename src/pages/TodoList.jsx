@@ -1,6 +1,7 @@
 import TodoItem from "@pages/TodoItem";
 import useAxiosInstance from "@hooks/useAxios";
 import { useEffect, useState } from "react";
+import TodoInput from "@pages/TodoInput";
 
 function TodoList() {
   const axios = useAxiosInstance();
@@ -23,6 +24,7 @@ function TodoList() {
   return (
     <>
       <ul className="Todolist scrollBar">{itemList}</ul>
+      <TodoInput fetchList={fetchList} />
     </>
   );
 }
