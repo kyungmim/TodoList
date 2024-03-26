@@ -25,20 +25,31 @@ function TodoInput({ fetchList }) {
   return (
     <>
       <form className="todoInput" onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="title">제목</label>
-        <input
-          type="text"
-          id="title"
-          placeholder="목표를 적어주세요!"
-          {...register("title")}
-        />
-        <label htmlFor="content">내용</label>
-        <textarea
-          type="text"
-          id="content"
-          placeholder="내용을 적어주세요!"
-          {...register("content")}
-        />
+        {/* <div className="done-box">
+          <label htmlFor="done">완료 : </label>
+          <input type="checkbox" id="done" {...register("done")} />
+        </div> */}
+
+        <div className="title-box">
+          <label htmlFor="title">제목</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="목표를 적어주세요!"
+            {...register("title")}
+          />
+        </div>
+
+        <div className="content-box">
+          <label htmlFor="content">내용</label>
+          <textarea
+            type="text"
+            id="content"
+            placeholder="내용을 적어주세요!"
+            {...register("content")}
+          />
+        </div>
+
         <button className="plusButton" type="submit">
           +
         </button>

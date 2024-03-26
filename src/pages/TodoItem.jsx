@@ -6,9 +6,10 @@ TodoItem.propTypes = {
     title: PropTypes.string,
     done: PropTypes.bool,
   }),
+  handleDelete: PropTypes.func,
 };
 
-function TodoItem({ item }) {
+function TodoItem({ item, handleDelete }) {
   return (
     <>
       {item.done ? (
@@ -27,7 +28,13 @@ function TodoItem({ item }) {
             />
           )}
           <p>{item.title}</p>
-          <button type="button" className="delete">
+          <button
+            type="button"
+            className="delete"
+            onClick={() => {
+              handleDelete(item._id);
+            }}
+          >
             삭제
           </button>
         </li>
@@ -47,7 +54,13 @@ function TodoItem({ item }) {
             />
           )}
           <p>{item.title}</p>
-          <button type="button" className="delete">
+          <button
+            type="button"
+            className="delete"
+            onClick={() => {
+              handleDelete(item._id);
+            }}
+          >
             삭제
           </button>
         </li>
